@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{103da3bf-19e1-450d-bec5-5c9a64f5ced1}</ProjectGuid>
+    <RootNamespace>yolov8obb</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.6.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;PROTOBUF_USE_DLLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>F:\trt\opencv3.4.12\install-cpu\include\opencv2;F:\trt\opencv3.4.12\install-cpu\include\opencv;F:\trt\opencv3.4.12\install-cpu\include;./utils;J:\shiyan\yolov8\TensorRT-8.4.3.1.Windows10.x86_64.cuda-11.6.cudnn8.4\TensorRT-8.4.3.1\include;J:\shiyan\yolov8\TensorRT-8.4.3.1.Windows10.x86_64.cuda-11.6.cudnn8.4\TensorRT-8.4.3.1\samples\common;./alg/protobuf-3.11.4/include;./alg/tensorRT/common;./alg/tensorRT;./alg/application;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>F:\trt\opencv3.4.12\install-cpu\x64\vc16\lib\opencv_world3412.lib;J:\shiyan\yolov8\TensorRT-8.4.3.1.Windows10.x86_64.cuda-11.6.cudnn8.4\TensorRT-8.4.3.1\lib\*.lib;J:\shiyan\yolov8\codex\rtryolov8\yolov8obb\alg\protobuf-3.11.4\lib\libprotobuf.lib;J:\shiyan\yolov8\codex\rtryolov8\yolov8obb\alg\protobuf-3.11.4\lib\libprotoc.lib;J:\shiyan\yolov8\codex\rtryolov8\yolov8obb\alg\protobuf-3.11.4\lib\libprotobuf-lite.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>J:\shiyan\yolov8\codex\rtryolov8\yolov8obb\alg\protobuf-3.11.4\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="alg\application\app_rtdetr.cpp" />
+    <ClCompile Include="alg\application\app_rtdetr\rtdetr.cpp" />
+    <ClCompile Include="alg\application\app_yolo.cpp" />
+    <ClCompile Include="alg\application\app_yolo\multi_gpu.cpp" />
+    <ClCompile Include="alg\application\app_yolo\yolo.cpp" />
+    <ClCompile Include="alg\application\app_yolo_cls.cpp" />
+    <ClCompile Include="alg\application\app_yolo_cls\yolo_cls.cpp" />
+    <ClCompile Include="alg\application\app_yolo_obb.cpp" />
+    <ClCompile Include="alg\application\app_yolo_obb\yolo_obb.cpp" />
+    <ClCompile Include="alg\application\app_yolo_pose.cpp" />
+    <ClCompile Include="alg\application\app_yolo_pose\yolo_pose.cpp" />
+    <ClCompile Include="alg\application\app_yolo_seg.cpp" />
+    <ClCompile Include="alg\application\app_yolo_seg\yolo_seg.cpp" />
+    <ClCompile Include="alg\application\test_yolo_map.cpp" />
+    <ClCompile Include="alg\application\tools\auto_download.cpp" />
+    <ClCompile Include="alg\application\tools\deepsort.cpp" />
+    <ClCompile Include="alg\application\tools\zmq_remote_show.cpp" />
+    <ClCompile Include="alg\application\tools\zmq_u.cpp" />
+    <ClCompile Include="alg\tensorRT\builder\trt_builder.cpp" />
+    <ClCompile Include="alg\tensorRT\common\cuda_tools.cpp" />
+    <ClCompile Include="alg\tensorRT\common\ilogger.cpp" />
+    <ClCompile Include="alg\tensorRT\common\json.cpp" />
+    <ClCompile Include="alg\tensorRT\common\trt_tensor.cpp" />
+    <ClCompile Include="alg\tensorRT\import_lib.cpp" />
+    <ClCompile Include="alg\tensorRT\infer\trt_infer.cpp" />
+    <ClCompile Include="alg\tensorRT\onnxplugin\onnxplugin.cpp" />
+    <ClCompile Include="alg\tensorRT\onnxplugin\plugin_binary_io.cpp" />
+    <ClCompile Include="alg\tensorRT\onnx\onnx-ml.pb.cpp" />
+    <ClCompile Include="alg\tensorRT\onnx\onnx-operators-ml.pb.cpp" />
+    <ClCompile Include="alg\tensorRT\onnx_parser\builtin_op_importers.cpp" />
+    <ClCompile Include="alg\tensorRT\onnx_parser\LoopHelpers.cpp" />
+    <ClCompile Include="alg\tensorRT\onnx_parser\ModelImporter.cpp" />
+    <ClCompile Include="alg\tensorRT\onnx_parser\NvOnnxParser.cpp" />
+    <ClCompile Include="alg\tensorRT\onnx_parser\onnx2trt_utils.cpp" />
+    <ClCompile Include="alg\tensorRT\onnx_parser\OnnxAttrs.cpp" />
+    <ClCompile Include="alg\tensorRT\onnx_parser\onnxErrorRecorder.cpp" />
+    <ClCompile Include="alg\tensorRT\onnx_parser\RNNHelpers.cpp" />
+    <ClCompile Include="alg\tensorRT\onnx_parser\ShapedWeights.cpp" />
+    <ClCompile Include="alg\tensorRT\onnx_parser\ShapeTensor.cpp" />
+    <ClCompile Include="yolov8obb.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="alg\application\app_rtdetr\rtdetr.hpp" />
+    <ClInclude Include="alg\application\app_yolo\multi_gpu.hpp" />
+    <ClInclude Include="alg\application\app_yolo\yolo.hpp" />
+    <ClInclude Include="alg\application\app_yolo_cls\yolo_cls.hpp" />
+    <ClInclude Include="alg\application\app_yolo_obb\yolo_obb.hpp" />
+    <ClInclude Include="alg\application\app_yolo_pose\yolo_pose.hpp" />
+    <ClInclude Include="alg\application\app_yolo_seg\yolo_seg.hpp" />
+    <ClInclude Include="alg\tensorRT\builder\trt_builder.hpp" />
+    <ClInclude Include="alg\tensorRT\common\cuda_tools.hpp" />
+    <ClInclude Include="alg\tensorRT\common\ilogger.hpp" />
+    <ClInclude Include="alg\tensorRT\common\infer_controller.hpp" />
+    <ClInclude Include="alg\tensorRT\common\json.hpp" />
+    <ClInclude Include="alg\tensorRT\common\monopoly_allocator.hpp" />
+    <ClInclude Include="alg\tensorRT\common\preprocess_kernel.cuh" />
+    <ClInclude Include="alg\tensorRT\common\trt_tensor.hpp" />
+    <ClInclude Include="alg\tensorRT\infer\trt_infer.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="alg\application\app_rtdetr\rtdetr_decode.cu" />
+    <CudaCompile Include="alg\application\app_yolo\yolo_decode.cu" />
+    <CudaCompile Include="alg\application\app_yolo_obb\yolo_obb_decode.cu" />
+    <CudaCompile Include="alg\application\app_yolo_pose\yolo_pose_decode.cu" />
+    <CudaCompile Include="alg\application\app_yolo_seg\yolo_seg_decode.cu" />
+    <CudaCompile Include="alg\tensorRT\common\preprocess_kernel.cu" />
+    <CudaCompile Include="alg\tensorRT\onnxplugin\plugins\DCNv2.cu" />
+    <CudaCompile Include="alg\tensorRT\onnxplugin\plugins\HSigmoid.cu" />
+    <CudaCompile Include="alg\tensorRT\onnxplugin\plugins\HSwish.cu" />
+    <CudaCompile Include="alg\tensorRT\onnxplugin\plugins\ScatterND.cu" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.6.targets" />
+  </ImportGroup>
+</Project>

@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="trt">
+      <UniqueIdentifier>{afc7e90d-fe0e-49ae-9a3a-b7d0d48d9d65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app_yolo_obb">
+      <UniqueIdentifier>{be24c7c3-db05-4db6-a866-4687e142080c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app_yolo">
+      <UniqueIdentifier>{f7a56769-ed44-47dc-a5a3-37df805933f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app_yolo_cls">
+      <UniqueIdentifier>{f32a2731-390a-44c1-86db-a4f1ac17c1d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app_yolo_pose">
+      <UniqueIdentifier>{ce58d2b2-3959-4d37-bc48-c25fb396a45a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app_yolo_seg">
+      <UniqueIdentifier>{0f933224-2bd6-4dc0-9006-010978b4e15c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app_rtdetr">
+      <UniqueIdentifier>{179f28f7-79cf-4e1f-8c69-b330dae01d46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app_bytetrack">
+      <UniqueIdentifier>{684eeea2-7131-406a-b72e-e9cbf26f584a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app">
+      <UniqueIdentifier>{2c9f035c-c685-4967-b67b-d3d417377e6b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="yolov8obb.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\builder\trt_builder.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\common\trt_tensor.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\common\json.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\common\ilogger.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\common\cuda_tools.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\infer\trt_infer.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\onnx\onnx-operators-ml.pb.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\onnx\onnx-ml.pb.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\onnx_parser\ShapeTensor.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\onnx_parser\ShapedWeights.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\onnx_parser\RNNHelpers.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\onnx_parser\onnxErrorRecorder.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\onnx_parser\OnnxAttrs.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\onnx_parser\onnx2trt_utils.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\onnx_parser\NvOnnxParser.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\onnx_parser\ModelImporter.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\onnx_parser\LoopHelpers.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\onnx_parser\builtin_op_importers.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\onnxplugin\onnxplugin.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\onnxplugin\plugin_binary_io.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\application\tools\auto_download.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\application\tools\deepsort.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\application\tools\zmq_remote_show.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\application\tools\zmq_u.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\tensorRT\import_lib.cpp">
+      <Filter>trt</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\application\app_yolo_obb\yolo_obb.cpp">
+      <Filter>app_yolo_obb</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\application\app_yolo\multi_gpu.cpp">
+      <Filter>app_yolo</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\application\app_yolo\yolo.cpp">
+      <Filter>app_yolo</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\application\app_yolo_cls\yolo_cls.cpp">
+      <Filter>app_yolo_cls</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\application\app_yolo_seg\yolo_seg.cpp">
+      <Filter>app_yolo_seg</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\application\app_yolo_pose\yolo_pose.cpp">
+      <Filter>app_yolo_pose</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\application\app_rtdetr\rtdetr.cpp">
+      <Filter>app_rtdetr</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\application\app_rtdetr.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\application\app_yolo.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\application\app_yolo_cls.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\application\app_yolo_obb.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\application\app_yolo_pose.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\application\app_yolo_seg.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="alg\application\test_yolo_map.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="alg\tensorRT\builder\trt_builder.hpp">
+      <Filter>trt</Filter>
+    </ClInclude>
+    <ClInclude Include="alg\tensorRT\common\preprocess_kernel.cuh">
+      <Filter>trt</Filter>
+    </ClInclude>
+    <ClInclude Include="alg\tensorRT\common\trt_tensor.hpp">
+      <Filter>trt</Filter>
+    </ClInclude>
+    <ClInclude Include="alg\tensorRT\common\monopoly_allocator.hpp">
+      <Filter>trt</Filter>
+    </ClInclude>
+    <ClInclude Include="alg\tensorRT\common\json.hpp">
+      <Filter>trt</Filter>
+    </ClInclude>
+    <ClInclude Include="alg\tensorRT\common\infer_controller.hpp">
+      <Filter>trt</Filter>
+    </ClInclude>
+    <ClInclude Include="alg\tensorRT\common\ilogger.hpp">
+      <Filter>trt</Filter>
+    </ClInclude>
+    <ClInclude Include="alg\tensorRT\common\cuda_tools.hpp">
+      <Filter>trt</Filter>
+    </ClInclude>
+    <ClInclude Include="alg\tensorRT\infer\trt_infer.hpp">
+      <Filter>trt</Filter>
+    </ClInclude>
+    <ClInclude Include="alg\application\app_yolo_obb\yolo_obb.hpp">
+      <Filter>app_yolo_obb</Filter>
+    </ClInclude>
+    <ClInclude Include="alg\application\app_yolo\multi_gpu.hpp">
+      <Filter>app_yolo</Filter>
+    </ClInclude>
+    <ClInclude Include="alg\application\app_yolo\yolo.hpp">
+      <Filter>app_yolo</Filter>
+    </ClInclude>
+    <ClInclude Include="alg\application\app_yolo_cls\yolo_cls.hpp">
+      <Filter>app_yolo_cls</Filter>
+    </ClInclude>
+    <ClInclude Include="alg\application\app_yolo_seg\yolo_seg.hpp">
+      <Filter>app_yolo_seg</Filter>
+    </ClInclude>
+    <ClInclude Include="alg\application\app_yolo_pose\yolo_pose.hpp">
+      <Filter>app_yolo_pose</Filter>
+    </ClInclude>
+    <ClInclude Include="alg\application\app_rtdetr\rtdetr.hpp">
+      <Filter>app_rtdetr</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="alg\tensorRT\common\preprocess_kernel.cu">
+      <Filter>trt</Filter>
+    </CudaCompile>
+    <CudaCompile Include="alg\tensorRT\onnxplugin\plugins\DCNv2.cu">
+      <Filter>trt</Filter>
+    </CudaCompile>
+    <CudaCompile Include="alg\tensorRT\onnxplugin\plugins\HSigmoid.cu">
+      <Filter>trt</Filter>
+    </CudaCompile>
+    <CudaCompile Include="alg\tensorRT\onnxplugin\plugins\HSwish.cu">
+      <Filter>trt</Filter>
+    </CudaCompile>
+    <CudaCompile Include="alg\tensorRT\onnxplugin\plugins\ScatterND.cu">
+      <Filter>trt</Filter>
+    </CudaCompile>
+    <CudaCompile Include="alg\application\app_yolo_obb\yolo_obb_decode.cu">
+      <Filter>app_yolo_obb</Filter>
+    </CudaCompile>
+    <CudaCompile Include="alg\application\app_yolo\yolo_decode.cu">
+      <Filter>app_yolo</Filter>
+    </CudaCompile>
+    <CudaCompile Include="alg\application\app_yolo_seg\yolo_seg_decode.cu">
+      <Filter>app_yolo_seg</Filter>
+    </CudaCompile>
+    <CudaCompile Include="alg\application\app_yolo_pose\yolo_pose_decode.cu">
+      <Filter>app_yolo_pose</Filter>
+    </CudaCompile>
+    <CudaCompile Include="alg\application\app_rtdetr\rtdetr_decode.cu">
+      <Filter>app_rtdetr</Filter>
+    </CudaCompile>
+  </ItemGroup>
+</Project>
