@@ -1,4 +1,5 @@
 # tensorRT_Pro-YOLOv8_VS2019 
+感谢原项目作者！
 基于tensorRT_Pro-YOLOv8 的VS 2019版
 原版项目地址：https://github.com/Melody-Zhou/tensorRT_Pro-YOLOv8
 基于它，在win10 vs2019上做了编译
